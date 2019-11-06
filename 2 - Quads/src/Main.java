@@ -13,14 +13,14 @@ public class Main {
 	public static void main(String[] args) {
 		displayManager = new DisplayManager();
 		displayManager.init();
-		displayManager.drawQuad();
+		displayManager.prepareQuad();
 		loop();
 	}
 
 	public static void loop() {
 		while(!glfwWindowShouldClose(glfwGetCurrentContext())) {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			displayManager.drawQuad();
+			displayManager.draw();
 			glfwSwapBuffers(displayManager.window);
 
 			glfwPollEvents();

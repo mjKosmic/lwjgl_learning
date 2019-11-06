@@ -1,33 +1,17 @@
-import static org.lwjgl.glfw.GLFW.GLFW_FALSE;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE;
-import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
-import static org.lwjgl.glfw.GLFW.GLFW_RESIZABLE;
-import static org.lwjgl.glfw.GLFW.GLFW_VISIBLE;
-import static org.lwjgl.glfw.GLFW.glfwCreateWindow;
-import static org.lwjgl.glfw.GLFW.glfwDefaultWindowHints;
-import static org.lwjgl.glfw.GLFW.glfwGetPrimaryMonitor;
-import static org.lwjgl.glfw.GLFW.glfwGetVideoMode;
-import static org.lwjgl.glfw.GLFW.glfwInit;
-import static org.lwjgl.glfw.GLFW.glfwMakeContextCurrent;
-import static org.lwjgl.glfw.GLFW.glfwSetKeyCallback;
-import static org.lwjgl.glfw.GLFW.glfwSetWindowPos;
-import static org.lwjgl.glfw.GLFW.glfwSetWindowShouldClose;
-import static org.lwjgl.glfw.GLFW.glfwShowWindow;
-import static org.lwjgl.glfw.GLFW.glfwSwapInterval;
-import static org.lwjgl.glfw.GLFW.glfwWindowHint;
-import static org.lwjgl.opengl.GL11.GL_QUADS;
-import static org.lwjgl.opengl.GL11.glBegin;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL.createCapabilities;
 import static org.lwjgl.opengl.GL11.glClearColor;
-import static org.lwjgl.opengl.GL11.glEnd;
-import static org.lwjgl.opengl.GL11.glVertex3f;
-import static org.lwjgl.opengl.GL15.GL_ARRAY_BUFFER;
-import static org.lwjgl.opengl.GL15.glBindBuffer;
-import static org.lwjgl.opengl.GL15.glGenBuffers;
+import static org.lwjgl.opengl.GL15.*;
+import static org.lwjgl.opengl.GL20.*;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
+import static org.lwjgl.system.MemoryUtil.NULL;
 
+import org.lwjgl.BufferUtils;
+import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL30;
-import org.lwjgl.opengl.GL32;
+
+import java.nio.FloatBuffer;
 
 public class DisplayManager {
 	public static final int WIDTH = 800;
@@ -36,7 +20,12 @@ public class DisplayManager {
 
 	public long window;
 
+	int vaoId;
+	int vboId;
+	int vertexCount;
+
 	public void init() {
+		GLFWErrorCallback.createPrint(System.err).set();
 		if (!glfwInit()) {
 			throw new IllegalStateException("Unable to initialize GLFW");
 		}
@@ -47,7 +36,7 @@ public class DisplayManager {
 
 		window = glfwCreateWindow(WIDTH, HEIGHT, "Display", 0, 0);
 
-		if (window < 1) {
+		if (window == NULL) {
 			throw new RuntimeException("Failed to create GLFW window");
 		}
 
@@ -64,22 +53,65 @@ public class DisplayManager {
 				(vidMode.height() - HEIGHT) / 2
 		);
 
+		//Make the OpenGL context current
 		glfwMakeContextCurrent(window);
+
+		//enable vsync
 		glfwSwapInterval(1);
+
+		//Show the window
 		glfwShowWindow(window);
 	}
 
-	public void drawQuad() {
+	public void prepareQuad() {
+		// This line is critical for LWJGL's interoperation with GLFW's
+		// OpenGL context, or any context that is managed externally.
+		// LWJGL detects the context that is current in the current thread,
+		// creates the GLCapabilities instance and makes the OpenGL
+		// bindings available for use.
+		createCapabilities();
+
+
 		glClearColor(0f,0f,0f, 0f);
-		int vaoId = GL30.glGenVertexArrays();
+		vaoId = GL30.glGenVertexArrays();
+
+		float[] vertices = {
+			-0.5f, 0.5f, 0f,
+			-0.5f, -0.5f, 0f,
+			0.5f, -0.5f, 0f,
+			0.5f, -0.5f, 0f,
+			0.5f, 0.5f, 0f,
+			-0.5f, 0.5f, 0f
+		};
+		FloatBuffer verticesBuffer = BufferUtils.createFloatBuffer(vertices.length);
+		verticesBuffer.put(vertices);
+		verticesBuffer.flip();
+
+		vertexCount = 6;
 		glBindVertexArray(vaoId);
-
-		glBindVertexArray(0);
-
-		int vboId = glGenBuffers();
+		vboId = glGenBuffers();
 		glBindBuffer(GL_ARRAY_BUFFER, vboId);
 
+		glBufferData(GL_ARRAY_BUFFER, verticesBuffer, GL_STATIC_DRAW);
+		//Put the VBO in the attribute list at index 0
+		glVertexAttribPointer(0, 3, GL_FLOAT, false, 0 , 0);
+
+
+
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glBindVertexArray(0);
+	}
+
+	public void draw() {
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		glBindVertexArray(vaoId);
+		glEnableVertexAttribArray(0);
+
+		glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+
+		glDisableVertexAttribArray(0);
+		glBindVertexArray(0);
 
 	}
 
