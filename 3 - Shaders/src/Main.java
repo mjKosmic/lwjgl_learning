@@ -1,3 +1,5 @@
+import static org.lwjgl.glfw.GLFW.glfwSwapBuffers;
+
 public class Main {
 
 	LWJGLManager lwjglManager;
@@ -20,6 +22,8 @@ public class Main {
 	void run() {
 		while (running) {
 			lwjglManager.poll();
+			lwjglManager.renderer.draw();
+			glfwSwapBuffers(lwjglManager.getWindowHandle());
 		}
 	}
 }

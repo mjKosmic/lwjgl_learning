@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386f3743-b153-4fc3-9807-8877fdae874b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../1 - Window/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1 - Window/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1 - Window/out/production/lwjgl_learning/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../1 - Window/out/production/lwjgl_learning/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3 - Shaders/src/ShaderProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3 - Shaders/src/shaders/screen.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3 - Shaders/src/shaders/screen.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/hs_err_pid20534.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/hs_err_pid20582.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/LWJGLManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/LWJGLManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/LWJGLManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/LWJGLManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/Renderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/Shader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/out/production/3 - Shaders/Shader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/src/LWJGLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/src/LWJGLManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/src/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/src/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3 - Shaders/src/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3 - Shaders/src/Shader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +34,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="253">
               <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -34,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DisplayManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="404">
+              <caret line="115" selection-start-line="115" selection-end-line="115" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFW.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="27960">
               <caret line="1890" column="23" selection-start-line="1890" selection-start-column="23" selection-end-line="1890" selection-end-column="23" />
             </state>
           </provider>
@@ -55,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFWErrorCallbackI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="300">
               <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
             </state>
           </provider>
@@ -64,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-sources.jar!/org/lwjgl/system/CallbackI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
+            <state relative-caret-position="285">
               <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
             </state>
           </provider>
@@ -73,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFWKeyCallback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
+            <state relative-caret-position="285">
               <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
             </state>
           </provider>
@@ -114,10 +126,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="778" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -125,6 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,8 +159,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,7 +185,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main - MacOS">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -248,17 +260,19 @@
       <updated>1572983777703</updated>
       <workItem from="1572983783543" duration="14000" />
       <workItem from="1572983888750" duration="4220000" />
+      <workItem from="1573604235364" duration="41000" />
+      <workItem from="1573604290488" duration="1332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4234000" />
+    <option name="totallyTimeSpent" value="5607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1166" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3791209" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37890625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -267,7 +281,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -303,38 +317,38 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFWKeyCallback.java">
+    <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFW.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-sources.jar!/org/lwjgl/system/CallbackI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="27960">
+          <caret line="1890" column="23" selection-start-line="1890" selection-start-column="23" selection-end-line="1890" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFWErrorCallbackI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="300">
           <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFW.java">
+    <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-sources.jar!/org/lwjgl/system/CallbackI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="1890" column="23" selection-start-line="1890" selection-start-column="23" selection-end-line="1890" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../lib/lwjgl/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFWKeyCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DisplayManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+        <state relative-caret-position="404">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -343,8 +357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="253">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
